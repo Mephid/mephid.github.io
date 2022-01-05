@@ -7,31 +7,31 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <nav class="nav">
-      <ul class="container nav__list">
-        <li class="nav__link nav__logo">GC</li>
-        <div class="nav__link-container">
-          <li class="nav__link">Progetti</li>
-          <li class="nav__link">About</li>
-          <li class="nav__link">Contatti</li>
-        </div>
-      </ul>
-    </nav>
+    <div class="navbar">
+      <div class="container navbar__container">
+        <div class="navbar__logo">GC</div>
+        <nav class="nav navbar__nav">
+          <ul>
+            <li class="nav__link">Progetti</li>
+            <li class="nav__link">About</li>
+            <li class="nav__link">Contatti</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
     <header class="hero">
       <div class="container">
-        <p>Ciao,</p>
-        <p class="hero__text hero__text--md">mi chiamo Gianluca.</p>
-        <h1>
+        <div class="hero__text">Ciao,</div>
+        <div class="hero__text hero__text--big">mi chiamo Gianluca.</div>
+        <h1 class="hero__text hero__text--big">
           Sono uno
-          <span class="hero__text hero__text--lg highlighted-primary"
-            >sviluppatore web</span
-          >.
+          <span class="color-primary">sviluppatore web</span>.
         </h1>
-        <p class="hero__text hero__text--sm">
+        <p class="hero__text hero__text--medium color-secondary-text">
           Hai bisogno di un sito internet o una web app?
         </p>
-        <button blass="button button--primary">Contattami</button>
+        <button class="button button--primary">Contattami</button>
       </div>
     </header>
 
@@ -40,44 +40,74 @@
         <h2 class="section__title">Progetti</h2>
         <div class="projects__cards-container">
           <div class="project-card">
-            <img class="project-card__image" src="/img/gattino.jpg" alt="" />
-            <h3 class="project-card__title">Calcolafacile.it</h3>
-            <div class="project-card__category">Sito web</div>
-            <div class="project-card__description">
-              Nullam gravida urna eget lobortis ultrices. Sed luctus neque sit
-              amet purus ornare rutrum. Curabitur rutrum quis ex non congue.
-              Quisque laoreet, purus nec feugiat laoreet, nulla arcu finibus
-              nisi, ac faucibus lectus est ac justo.
+            <img
+              class="project-card__image project-card__image--left"
+              src="/img/gattino.jpg"
+              alt=""
+            />
+            <div class="project-card__info">
+              <div class="project-card__upper-section">
+                <h3 class="project-card__title">Calcolafacile.it</h3>
+                <div class="project-card__category">Sito web</div>
+                <p class="project-card__description">
+                  Nullam gravida urna eget lobortis ultrices. Sed luctus neque
+                  sit amet purus ornare rutrum. Curabitur rutrum quis ex non
+                  congue. Quisque laoreet, purus nec feugiat laoreet, nulla arcu
+                  finibus nisi, ac faucibus lectus est ac justo.
+                </p>
+              </div>
+              <div class="project-card__lower-section">
+                <div class="button-group">
+                  <button
+                    class="button-group__button button button--primary-outline"
+                  >
+                    Vai al sito
+                  </button>
+                  <button
+                    class="button-group__button button button--primary-outline"
+                  >
+                    Source Code
+                  </button>
+                </div>
+                <hr class="project-card__divider" />
+                <ul class="project-card__technologies">
+                  <li class="project-card__technology">Typescript</li>
+                  <li class="project-card__technology">Next.js</li>
+                  <li class="project-card__technology">Bootstrap</li>
+                </ul>
+              </div>
             </div>
-            <button class="button button--primary-outline">Vai al sito</button>
-            <button class="button button--primary-outline">Source Code</button>
-            <hr class="project-card__divider" />
-            <ul class="project-card__technologies">
-              <li class="project-card__technology">Typescript</li>
-              <li class="project-card__technology">Next.js</li>
-              <li class="project-card__technology">Bootstrap</li>
-            </ul>
           </div>
 
           <div class="project-card">
-            <img class="project-card__image" src="/img/gattino.jpg" alt="" />
-            <h3 class="project-card__title">LetteraturaHorror.it</h3>
-            <div class="project-card__category">Sito web</div>
-            <div class="project-card__description">
-              Nullam gravida urna eget lobortis ultrices. Sed luctus neque sit
-              amet purus ornare rutrum. Curabitur rutrum quis ex non congue.
-              Quisque laoreet, purus nec feugiat laoreet, nulla arcu finibus
-              nisi, ac faucibus lectus est ac justo.
+            <div class="project-card__info">
+              <div class="project-card__upper-section">
+                <h3 class="project-card__title">LetteraturaHorror.it</h3>
+                <div class="project-card__category">Sito web</div>
+                <p class="project-card__description">
+                  Nullam gravida urna eget lobortis ultrices. Sed luctus neque
+                  sit amet purus ornare rutrum. Curabitur rutrum quis ex non
+                  congue. Quisque laoreet, purus nec feugiat laoreet, nulla arcu
+                  finibus nisi, ac faucibus lectus est ac justo.
+                </p>
+              </div>
+              <div class="project-card__lower-section">
+                <button class="button button--primary-outline">
+                  Vai al sito
+                </button>
+                <hr class="project-card__divider" />
+                <ul class="project-card__technologies">
+                  <li class="project-card__technology">Wordpress</li>
+                  <li class="project-card__technology">Bootstrap</li>
+                  <li class="project-card__technology">JQuery</li>
+                </ul>
+              </div>
             </div>
-            <button class="project-card__button button button--primary-outline">
-              Vai al sito
-            </button>
-            <hr class="project-card__divider" />
-            <ul class="project-card__technologies">
-              <li class="project-card__technology">Wordpress</li>
-              <li class="project-card__technology">Bootstrap</li>
-              <li class="project-card__technology">JQuery</li>
-            </ul>
+            <img
+              class="project-card__image project-card__image--right"
+              src="/img/gattino.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -113,7 +143,6 @@
     <footer class="footer">
       <div class="container">
         <div class="copyright">&copy; Cappai Gianluca 2022</div>
-
         <nav class="nav footer__nav">
           <ul class="nav__list">
             <li class="nav__link">Progetti</li>
