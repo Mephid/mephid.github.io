@@ -2,14 +2,13 @@
   --text-color: #3b3b3b;
   --secondary-text-color: #737373;
   --black: #3b3b3b;
-  --gray: #989898;
+  --gray: #f8f8f8;
   --white: #fafafa;
-  --primary: #e1523b;
-  --primary-light: #f5715c;
-  --secondary: #65b299;
+  --primary: #eb5e28;
+  --secondary: #2a9d8f;
 
   --font-size: 18px;
-  --font-size-sm: 0.75rem;
+  --font-size-sm: 0.85rem;
   --font-size-md: 1.25rem;
   --font-size-lg: 2rem;
   --font-size-xl: 3rem;
@@ -20,12 +19,15 @@
 
   --spacer: 10px;
 
+  --space-xl: calc(var(--spacer) * 10);
   --space-lg: calc(var(--spacer) * 8);
   --space-md: calc(var(--spacer) * 6);
   --space: calc(var(--spacer) * 4);
   --space-sm: calc(var(--spacer) * 3);
   --space-xs: calc(var(--spacer) * 2);
   --space-xxs: calc(var(--spacer));
+
+  --section-spacing: calc(var(--spacer) * 15);
 
   --container-width: 1200px;
 
@@ -35,7 +37,7 @@
 html {
   box-sizing: border-box;
   font-size: var(--font-size);
-  font-family: var(--font-family-primary), Sans-Serif;
+  font-family: var(--font-family-primary), sans-serif;
   color: var(--text-color);
 }
 
@@ -50,10 +52,6 @@ p {
 ul {
   padding: 0;
   margin: 0;
-}
-
-button {
-  font-size: var(--font-size);
 }
 
 h1,
@@ -85,7 +83,7 @@ p {
 /* ------------------------- SECTION ------------------------- */
 
 .section {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--section-spacing);
 }
 
 .section__title {
@@ -97,23 +95,25 @@ p {
 /* ------------------------- BUTTONS ------------------------- */
 
 .button {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
   border-radius: 0;
   padding: var(--space-xxs) var(--space-xs);
-  text-transform: uppercase;
   border: solid;
 }
 
 .button--primary {
   background-color: var(--primary);
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   color: var(--white);
 }
 
 .button--primary-outline {
   background-color: transparent;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   color: var(--primary);
-  font-weight: var(--font-regular);
 }
 
 /* ------------------------- BUTTON-GROUP ------------------------- */
@@ -185,14 +185,22 @@ p {
   align-items: center;
 }
 
+.hero__text {
+  line-height: 0.75em;
+}
+
+.hero__text:not(:nth-last-child(2)) {
+  margin-bottom: var(--space-sm);
+}
+
 .hero__text--big {
   font-size: var(--font-size-xl);
   font-weight: var(--font-extrabold);
 }
 
 .hero__text--medium {
-  margin-top: var(--space);
-  margin-bottom: var(--space);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
   font-size: var(--font-size-md);
 }
 
@@ -203,7 +211,7 @@ p {
 }
 
 .project-card:not(:last-child) {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .project-card__info {
@@ -254,14 +262,24 @@ p {
   line-height: 0.75em;
   color: var(--secondary-text-color);
   margin-bottom: var(--space-xxs);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
 }
 
 .project-card__technology {
   display: inline;
-  font-size: var(--font-size-sm);
-  text-transform: uppercase;
 }
 
 .project-card__technology:not(:first-child) {
   margin-left: var(--space-xs);
 }
+
+/* ------------------------- ABOUT ------------------------- */
+
+.about {
+  background-color: var(--gray);
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+/* ------------------------- CONTATTI ------------------------- */
