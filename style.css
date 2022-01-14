@@ -215,6 +215,13 @@ p {
   .navbar__container {
     flex-direction: column;
   }
+
+  .navbar__logo {
+    margin-top: var(--space-xs);
+  }
+  .navbar__nav {
+    margin-top: var(--space-xxs);
+  }
 }
 
 /* ------------------------- NAV ------------------------- */
@@ -231,15 +238,6 @@ p {
 
 .nav__link:not(:first-child) {
   padding-left: var(--space-sm);
-}
-
-@media screen and (max-width: 576px) {
-  .navbar__logo {
-    margin-top: var(--space-xs);
-  }
-  .navbar__nav {
-    margin-top: var(--space-xs);
-  }
 }
 
 /* ------------------------- HERO ------------------------- */
@@ -310,6 +308,10 @@ p {
     line-height: 1;
   }
 
+  .hero__text--medium {
+    line-height: 1.5;
+  }
+
   .hero__text:not(:nth-last-child(2)) {
     margin-bottom: var(--space-xs);
   }
@@ -328,7 +330,7 @@ p {
 
 /* ------------------------- PROJECT-CARD ------------------------- */
 .projects {
-  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
 }
 
 /* ------------------------- PROJECT-CARD ------------------------- */
@@ -386,27 +388,22 @@ p {
 
 .project-card__divider {
   margin-top: var(--space-sm);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0;
   height: 1px;
   background-color: #ccc;
   border: none;
 }
 
 .project-card__technologies {
-  list-style: none;
-  line-height: 0.75em;
   color: var(--secondary-text-color);
   margin-bottom: var(--space-xxs);
-  font-size: var(--font-size-sm);
-  text-transform: uppercase;
+  font-size: var(--font-size);
 }
 
 .project-card__technology {
-  display: inline;
-}
-
-.project-card__technology:not(:first-child) {
-  margin-left: var(--space-xs);
+  display: inline-block;
+  padding-top: var(--space-xs);
+  margin-right: var(--space-xs);
 }
 
 @media screen and (max-width: 1200px) {
@@ -475,6 +472,15 @@ p {
   .project-card__divider {
     margin-left: calc(-1 * var(--space-xs));
     margin-right: calc(-1 * var(--space-xs));
+  }
+
+  .project-card__technologies {
+    text-align: center;
+  }
+
+  .project-card__technology {
+    margin-right: var(--space-xxs);
+    margin-left: var(--space-xxs);
   }
 }
 
