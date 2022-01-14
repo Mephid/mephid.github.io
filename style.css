@@ -5,6 +5,8 @@
   --gray: #f8f8f8;
   --white: #fafafa;
   --primary: #eb5e28;
+  --primary-light: #fa8659;
+  --primary-dark: #d45523;
   --secondary: #2a9d8f;
 
   --font-size: 18px;
@@ -42,7 +44,13 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 p {
@@ -75,9 +83,15 @@ p {
 
 .container {
   max-width: var(--container-width);
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+  }
 }
 
 /* ------------------------- SECTION ------------------------- */
@@ -102,6 +116,8 @@ p {
   border-radius: 0;
   padding: var(--space-xxs) var(--space-xs);
   border: solid;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .button--primary {
@@ -110,10 +126,20 @@ p {
   color: var(--white);
 }
 
+.button--primary:hover {
+  background-color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+
 .button--primary-outline {
   background-color: transparent;
   border: 1px solid var(--primary);
   color: var(--primary);
+}
+
+.button--primary-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 /* ------------------------- BUTTON-GROUP ------------------------- */
@@ -163,13 +189,21 @@ p {
   align-items: center;
 }
 
+.navbar__nav-link {
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+}
+
 /* ------------------------- NAV ------------------------- */
 
 .nav__link {
   display: inline;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-bold);
-  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--primary);
+  transition: color 0.2s;
 }
 
 .nav__link:not(:first-child) {
@@ -184,6 +218,33 @@ p {
   display: flex;
   align-items: center;
 }
+
+/* .hero::before {
+  content: '';
+  height: 700px;
+  width: 700px;
+  z-index: -10;
+  border-radius: 50%;
+  position: absolute;
+  top: -8%;
+  left: -20%;
+  filter: blur(30px);
+  background-color: var(--secondary);
+  opacity: 80%;
+}
+
+.hero::after {
+  content: '';
+  height: 700px;
+  width: 700px;
+  z-index: -10;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  filter: blur(30px);
+  background-color: var(--primary);
+} */
 
 .hero__text {
   line-height: 0.75em;
@@ -202,6 +263,11 @@ p {
   margin-top: var(--space-md);
   margin-bottom: var(--space-sm);
   font-size: var(--font-size-md);
+}
+
+/* ------------------------- PROJECT-CARD ------------------------- */
+.projects {
+  margin-top: var(--space-sm);
 }
 
 /* ------------------------- PROJECT-CARD ------------------------- */
@@ -283,3 +349,27 @@ p {
 }
 
 /* ------------------------- CONTATTI ------------------------- */
+
+.contatti {
+  text-align: center;
+}
+
+.contatti__container {
+  width: 40%;
+}
+
+.contatti__paragraph {
+  margin-bottom: var(--space-sm);
+}
+
+/* ------------------------- FOOTER ------------------------- */
+
+.footer {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
