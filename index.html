@@ -8,54 +8,67 @@
       content="Sviluppatore web. Siti internet, web app, landing page."
     />
     <title>GC | Web Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
     />
-    <noscript
-      ><link
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
-    /></noscript>
+      />
+    </noscript>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="navbar">
-      <div class="container navbar__container">
-        <div class="navbar__logo">GC</div>
-        <nav class="nav navbar__nav">
-          <ul>
-            <li class="navbar__nav-link nav__link">
-              <a href="#progetti">Progetti</a>
-            </li>
-            <li class="navbar__nav-link nav__link">
-              <a href="#about">About</a>
-            </li>
-            <li class="navbar__nav-link nav__link">
-              <a href="#contatti">Contatti</a>
-            </li>
-          </ul>
-        </nav>
+    <header class="header">
+      <div class="navbar">
+        <div class="container navbar__container">
+          <div class="navbar__logo">GC</div>
+          <nav class="nav navbar__nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="navbar__nav-link nav__link" href="#progetti"
+                  >Progetti</a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a
+                  class="navbar__nav-link nav__link nav__link--last"
+                  href="#contatti"
+                  >Contatti</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
 
-    <header class="hero">
-      <div class="container hero__container">
-        <div class="hero__text">Ciao,</div>
-        <div class="hero__text hero__text--big">mi chiamo Gianluca.</div>
-        <h1 class="hero__text hero__text--big">
-          Sono uno
-          <br class="hero__br--mobile" />
-          <span class="color-primary">sviluppatore web</span>.
-        </h1>
-        <p class="hero__text hero__text--medium color-secondary-text">
-          Hai bisogno di un sito internet o una web app?
-        </p>
-        <button class="button button--primary">Contattami</button>
+      <div class="hero">
+        <div class="container hero__container">
+          <div class="hero__text">Ciao,</div>
+          <div class="hero__text hero__text--big">mi chiamo Gianluca.</div>
+          <h1 class="hero__text hero__text--big">
+            Sono uno
+            <br class="hero__br--mobile" />
+            <span class="color-primary">sviluppatore web</span>.
+          </h1>
+          <p class="hero__text hero__text--medium color-secondary-text">
+            Hai bisogno di un sito internet o una web app?
+          </p>
+          <a class="button button--primary" href="mailto:gcappa.dev@gmail.com"
+            >Contattami</a
+          >
+        </div>
       </div>
     </header>
 
@@ -66,32 +79,40 @@
           <div class="project-card">
             <img
               class="project-card__image project-card__image"
-              src="/img/gattino.jpg"
-              alt=""
+              src="/img/calcolafacile_frontend.webp"
+              alt="Calcolafacile.it frontend preview."
+              width="950px"
+              height="633px"
             />
             <div class="project-card__info">
               <div class="project-card__upper-section">
-                <h3 class="project-card__title">Calcolafacile.it</h3>
+                <h3 class="project-card__title">Calcolafacile.it (Frontend)</h3>
                 <div class="project-card__category">Sito web</div>
                 <p class="project-card__description">
-                  Nullam gravida urna eget lobortis ultrices. Sed luctus neque
-                  sit amet purus ornare rutrum. Curabitur rutrum quis ex non
-                  congue. Quisque laoreet, purus nec feugiat laoreet, nulla arcu
-                  finibus nisi, ac faucibus lectus est ac justo.
+                  Calcolafacile.it è una raccolta di calcolatori online. <br />
+                  I calcoli utili nella vita di tutti i giorni vengono
+                  automatizzati e resi di semplice utilizzo grazie a
+                  un'interfaccia utente minimale e intuitiva.
                 </p>
               </div>
               <div class="project-card__lower-section">
                 <div class="button-group">
-                  <button
+                  <a
                     class="button-group__button button button--primary-outline"
+                    href="https://calcolafacile.it"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Vai al sito
-                  </button>
-                  <button
+                  </a>
+                  <a
                     class="button-group__button button button--primary-outline"
+                    href="https://github.com/Mephid/calcolafacile.it_frontend"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Source Code
-                  </button>
+                  </a>
                 </div>
                 <hr class="project-card__divider" />
                 <ul class="project-card__technologies">
@@ -106,29 +127,40 @@
           <div class="project-card">
             <img
               class="project-card__image project-card__image"
-              src="/img/gattino.jpg"
-              alt=""
+              src="/img/calcolafacile_backend.webp"
+              alt="Calcolafacile.it backend preview."
+              width="950px"
+              height="633px"
             />
             <div class="project-card__info">
               <div class="project-card__upper-section">
-                <h3 class="project-card__title">LetteraturaHorror.it</h3>
-                <div class="project-card__category">Sito web</div>
+                <h3 class="project-card__title">Calcolafacile.it (Backend)</h3>
+                <div class="project-card__category">REST API</div>
                 <p class="project-card__description">
-                  Nullam gravida urna eget lobortis ultrices. Sed luctus neque
-                  sit amet purus ornare rutrum. Curabitur rutrum quis ex non
-                  congue. Quisque laoreet, purus nec feugiat laoreet, nulla arcu
-                  finibus nisi, ac faucibus lectus est ac justo.
+                  Backend del sito Calcolafacile.it sviluppato secondo la Clean
+                  architecture. <br />
+                  Qui è contenuta la logica dei calcolatori e il servizio per
+                  l'invio delle email. Il tutto accessibile tramite API REST.
+                  <br />
                 </p>
               </div>
               <div class="project-card__lower-section">
-                <button class="button button--primary-outline">
-                  Vai al sito
-                </button>
+                <div class="button-group">
+                  <a
+                    class="button-group__button button button--primary-outline"
+                    href="https://github.com/Mephid/calcolafacile.it_backend"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Source Code
+                  </a>
+                </div>
+
                 <hr class="project-card__divider" />
                 <ul class="project-card__technologies">
-                  <li class="project-card__technology">Wordpress</li>
-                  <li class="project-card__technology">Bootstrap</li>
-                  <li class="project-card__technology">JQuery</li>
+                  <li class="project-card__technology">Node.js</li>
+                  <li class="project-card__technology">Express.js</li>
+                  <li class="project-card__technology">Typescript</li>
                 </ul>
               </div>
             </div>
@@ -137,50 +169,47 @@
       </div>
     </section>
 
-    <section id="about" class="section about">
-      <div class="container">
-        <h2 class="section__title">About</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum est
-          commodi molestias excepturi aperiam saepe, eligendi cum ducimus
-          necessitatibus tempora repellendus totam impedit quidem nostrum
-          explicabo id eos. <br />
-          Ut, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit
-          landitiis reiciendis maiores soluta veniam sed, consequuntur culpa ea
-          sapiente nemo. Maxime eius ipsum adipisci sapiente omnis. Consequuntur
-          corrupti dolores delectus dolore?
-        </p>
-      </div>
-    </section>
-
     <section id="contatti" class="section contatti">
       <div class="container contatti__container">
         <h2 class="section__title">Contatti</h2>
         <p class="contatti__paragraph">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum est
-          commodi molestias excepturi aperiam saepe.
+          Hai un'idea per un sito internet o un'applicazione e vorresti vederla
+          realizzata?
+          <br />
+          Raccontami il tuo progetto e troveremo insieme la soluzione migliore.
         </p>
-        <button class="button button--primary">Invia messaggio</button>
+        <a class="button button--primary" href="mailto:gcappa.dev@gmail.com"
+          >Invia messaggio</a
+        >
       </div>
     </section>
 
     <footer class="footer">
       <div class="container footer__container">
-        <div class="copyright">&copy; Cappai Gianluca 2022</div>
+        <div class="footer__copyright">
+          &copy; 2021-<span id="year"></span> Gianluca Cappai
+        </div>
         <nav class="nav footer__nav">
-          <ul>
-            <li class="footer__nav-link nav__link">
-              <a href="#progetti">Progetti</a>
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a class="footer__nav-link nav__link" href="#progetti"
+                >Progetti</a
+              >
             </li>
-            <li class="footer__nav-link nav__link">
-              <a href="#about">About</a>
-            </li>
-            <li class="footer__nav-link nav__link">
-              <a href="#contatti">Contatti</a>
+            <li class="nav__list-item nav__list-item-">
+              <a
+                class="footer__nav-link nav__link nav__link--last"
+                href="#contatti"
+                >Contatti</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </footer>
+    <script>
+      var yearContainer = document.getElementById('year');
+      yearContainer.innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>
