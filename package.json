@@ -1,0 +1,24 @@
+{
+  "name": "gcappai-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildCss": "postcss src/style.css -o dist/style.css"
+  },
+  "browserslist": [
+    ">0.2%"
+  ],
+  "keywords": [
+    "portfolio",
+    "webdev"
+  ],
+  "author": "GCappai",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.16",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0"
+  }
+}

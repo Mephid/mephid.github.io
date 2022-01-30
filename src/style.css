@@ -429,6 +429,7 @@ p {
   .projects__cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    -moz-column-gap: var(--space-xs);
     column-gap: var(--space-xs);
     row-gap: var(--space-xl);
   }
